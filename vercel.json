@@ -2,6 +2,5 @@
   "version": 2,
   "public": true,
   "builds": [{ "src": "app.js", "use": "@vercel/node" }],
-  "routes": [{ "src": "/(.*)", "dest": "app.js" }],
-  "staticFiles": [{ "src": "/public/(.*)", "dest": "/public/$1" }]
+  "routes": [{ "src": "/(.*)", "dest": "app.js" }]
 }
