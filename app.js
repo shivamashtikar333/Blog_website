@@ -35,6 +35,7 @@ app.use(
 app.use(express.static("public"));
 
 // Templating Engine
+app.use(expressLayout);
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 app.set("layout", "./layouts/main");
