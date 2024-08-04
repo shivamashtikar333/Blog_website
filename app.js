@@ -21,6 +21,9 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(methodOverride("_method"));
 
+// Serve static files from the 'public' directory
+app.use(express.static(path.join(__dirname, "public")));
+
 app.use(
   session({
     secret: "keyboard cat",
@@ -31,8 +34,6 @@ app.use(
     }),
   })
 );
-
-app.use(express.static("public"));
 
 // Templating Engine
 app.use(expressLayout);
